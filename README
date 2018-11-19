@@ -1,0 +1,4 @@
+linux.sh       --- I use this script to install all the necessary software needed for me (Run it after installing the OS).
+test-sail      --- All the test scripts and data to test SAIL_BITMAP
+nc-tcp-mininet --- Contains Mininet scripts for experimenting NC-TCP
+
