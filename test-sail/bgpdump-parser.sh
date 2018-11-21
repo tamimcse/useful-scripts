@@ -1,8 +1,28 @@
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  3549 rv2.20181105.1000-3549-link3
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  18106 rv2.20181105.1000-18106-viewqwest
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  40191 rv2.20181105.1000-40191-zerofail
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  3356 rv2.20181105.1000-3356-CenturyLink
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  2914 rv2.20181105.1000-2914-nttamerica
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  6453 rv2.20181105.1000-6453-tata
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  7922 rv2.20181105.1000-7922-comcast
-sudo python bgpdump-parser.py rv2.20181105.1000-bgpdump-m-output  6939 rv2.20181105.1000-6939-HurricaneElectric 
+#!/bin/sh
+
+#BGPdump option (-m) output file
+BGP_DUMP_OUTPUT="rv2.20181105.1000"
+
+echo "Extracting routing table of Link3 \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  3549 link3-routes
+
+echo "Extracting routing table of View Qwest \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  18106 viewqwest-routes
+
+echo "Extracting routing table of Zero Fail \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  40191 zerofail-routes
+
+echo "Extracting routing table of Century Link \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  3356 CenturyLink-routes
+
+echo "Extracting routing table of NTT America \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  2914 nttamerica-routes
+
+echo "Extracting routing table of Tata \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  42541 fiberby-routes
+
+echo "Extracting routing table of Comcast \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  7922 comcast-routes
+
+echo "Extracting routing table of Hurricane Electric \n"
+sudo python bgpdump-parser.py $BGP_DUMP_OUTPUT  6939 HurricaneElectric-routes
