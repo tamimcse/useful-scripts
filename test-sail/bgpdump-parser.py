@@ -3,7 +3,7 @@
 
 import sys
 
-out = open("fib.txt", "a")
+out = open("routes.txt", "a")
 
 prefix_set = set()
 nh_dict = {}
