@@ -1,4 +1,4 @@
-routes.txt        --- Actual routes of backbone routers where next-hops are replaced with veth0-veth31
+routes.txt        --- Actual routes of a backbone router where next-hops are replaced with veth0-veth31
 addroutes.sh      --- Add routes in routes.txt
 delroutes.sh      --- Delete routes in routes.txt
 
