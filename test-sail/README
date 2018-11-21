@@ -8,3 +8,8 @@ create-veths.py   --- Create 32 veths on the machine
 addroutes.py      --- Add routes in routes.1.txt
 delroutes.py      --- Delete routes in routes.1.txt
 
+
+Routes in routes.txt are produced from the actual RIB snapshot of http://www.routeviews.org/routeviews/. Each RIB snapshots however contains routes from multiple backbone routers. Moreover the snapshot are in MRT format (not human headable). We extract the actual routing table from the RIB snopshot as following:
+
+1. Use BGPdump (libbgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
+2. Then we use bgpdump-parser.sh to convert the bgpdump output file into routes.txt. bgpdump-parser.sh internally use bgpdump-parser.py which performs the actual conversion.
