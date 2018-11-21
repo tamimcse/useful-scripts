@@ -1,21 +1,32 @@
-#This scripts reads BGPdump -m output and extracts FIBs
-from subprocess import call
+#!/usr/bin/python
+#This scripts inputs BGPdump output and a peer ID and extracts routing table for the peer
+
+import sys
 
 out = open("fib.txt", "a")
 
 prefix_set = set()
 nh_dict = {}
 i = 0
-filter_by = 34288
 
-with open("rib.linx.20141217.0000") as f:
+if len(sys.argv) != 3 :
+	print "sudo python bgpdump-parser.py bgpdump peer"
+	print "where"
+	print "bgpdump   ---	Output of BGPdump -m option "
+	print "peer      ---	AS ID of the peer"
+	sys.exit()
+
+bgpdump_output_file = sys.argv[1] 
+target_peer_id = sys.argv[2]
+
+with open(bgpdump_output_file) as f:
     for line in f:
 	arr = line.replace("\r\n", "").split("|")
         as_id = arr[4]#Extract the AS
 	prefix = arr[5]#Extract the prefix
 	next_hop = arr[8]
 
-	if int(as_id) != filter_by :
+	if int(as_id) != int(target_peer_id) :
 	    continue    	 
 
 	if prefix not in prefix_set :
