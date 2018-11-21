@@ -13,3 +13,9 @@ Routes in routes.txt are produced from the actual RIB snapshot of http://www.rou
 
 1. Use BGPdump (libbgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
 2. Then we use bgpdump-parser.sh to convert the bgpdump output file into routes.txt. bgpdump-parser.sh internally use bgpdump-parser.py which performs the actual conversion.
+
+
+
+Routing table snapshot of several Tier-1 ISPs:
+
+rv2.20181105.1000-3549-link3 - Snapshot of Link 3 (AS3549) on 2018-11-05 at 10AM
