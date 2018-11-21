@@ -6,7 +6,7 @@ out = open("fib.txt", "a")
 prefix_set = set()
 nh_dict = {}
 i = 0
-filter_by = 3356
+filter_by = 3549
 
 with open("bgpdump-m.txt") as f:
     for line in f:
@@ -38,4 +38,4 @@ with open("bgpdump-m.txt") as f:
             if next_hop not in nh_dict :
 	        nh_dict[next_hop] = i
                 i = i + 1
-	    out.write("{0}\tveth{1}\n".format(arr[5], nh_dict[next_hop]))
+	    out.write("{0}\tveth{1}\n".format(arr[5], nh_dict[next_hop]%32))
