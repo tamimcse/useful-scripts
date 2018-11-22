@@ -14,18 +14,16 @@ class Peer:
   def myfunc(self):
     print("Hello my name is " + self.name)
 
-prefix_set = set()
-nh_dict = {}
-i = 0
+#prefix_set = set()
+#nh_dict = {}
+#i = 0
 
 peer_dict = {}
 
 if len(sys.argv) != 2 :
-	print "sudo python bgpdump-parser.py inputfile peer outputfile"
+	print "sudo python bgpdump-parser.py inputfile"
 	print "where"
 	print "inputfile  ---	Output of BGPdump -m option "
-	print "peer       ---	AS ID of the peer"
-	print "outputfile ---	AS ID of the peer"
 	sys.exit()
 
 bgpdump_output_file = sys.argv[1] 
@@ -44,17 +42,11 @@ with open(bgpdump_output_file) as f:
 	if as_id not in peer_dict :
 		peer_dict[as_id] = Peer(as_id)
 
-	prefix_set = peer_dict[as_id].prefix_set 
-	nh_dict = peer_dict[as_id].nh_dict
-	nh_total = peer_dict[as_id].nh_total
-	out = peer_dict[as_id].out
-
-	if prefix not in prefix_set :
-	    prefix_set.add(prefix)
-            #Convert next-hop to a veth ID
-            if next_hop not in nh_dict :
-	        peer_dict[as_id].nh_dict[next_hop] = nh_total
+	if prefix not in peer_dict[as_id].prefix_set :
+	    peer_dict[as_id].prefix_set.add(prefix)
+            if next_hop not in peer_dict[as_id].nh_dict :
+	        peer_dict[as_id].nh_dict[next_hop] = peer_dict[as_id].nh_total
                 peer_dict[as_id].nh_total = peer_dict[as_id].nh_total + 1
 		print "number of next-hops in {0} is {1}".format(as_id, peer_dict[as_id].nh_total)
-	    out.write("{0}\tveth{1}\n".format(arr[5], nh_dict[next_hop]%32))
+	    peer_dict[as_id].out.write("{0}\tveth{1}\n".format(prefix, peer_dict[as_id].nh_dict[next_hop]%32))
 #	    out.write("{0}\t{1}\n".format(arr[5], next_hop))
