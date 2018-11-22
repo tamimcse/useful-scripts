@@ -9,7 +9,7 @@ sudo apt-get install -y liblz4-tool liblz-dev libbz2-dev &&
 sudo apt-get install -y kexec-tools &&
 sudo apt-get install -y openjdk-8-jre-headless &&
 sudo apt-get install -y hexchat tree &&
-sudo apt-get install -y hardinfo &&
+sudo apt-get install -y hardinfo lmbench &&
 sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools cmake &&
 sudo apt-get install -y g++ &&
 #BPF compiler
