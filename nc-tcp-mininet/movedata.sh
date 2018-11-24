@@ -1,1 +1,0 @@
-sudo mv *.data experiment
