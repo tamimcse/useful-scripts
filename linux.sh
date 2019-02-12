@@ -31,6 +31,8 @@ sudo apt-get install -y libncurses5-dev gawk gettext unzip file libssl-dev wget 
 #Firmware reverse engineering
 sudo apt-get install -y binwalk squashfs-tools python-magic &&
 sudo apt-get install -y gnuplot &&
+#needed for Domino
+sudo apt-get install -y graphviz &&
 sudo apt-get install -y v4l-utils &&
 sudo apt-get install -y libva-dev vainfo mesa-utils mesa-common-dev inxi &&
 sudo apt-get install -y libx264-dev &&
