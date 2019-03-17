@@ -47,37 +47,9 @@ sudo apt-get install -y lsscsi cpuset sysstat rt-tests libnuma-dev hwloc &&
 sudo apt-get install -y libvirt-bin libvirt-dev &&
 #DVD burner
 sudo apt-get install -y k3b &&
-cd Downloads &&
-wget https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz &&
-wget https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.10.4.tar.xz &&
-files=( 
-	"gstreamer-1.10.4.tar.xz" 
-	"gst-plugins-base-1.10.4.tar.xz" 
-	"gst-plugins-good-1.10.4.tar.xz" 
-	)
-for i in "${files[@]}"
-do
-  tar xvfJ $i && cd ${i%.tar.xz} && sudo ./autogen.sh && sudo ./configure && sudo make -j8 && sudo make install && sudo ldconfig && cd ..
-done
-files=( 
-	"gst-plugins-bad-1.10.4.tar.xz" 
-	"gst-plugins-ugly-1.10.4.tar.xz" 
-	"gst-libav-1.10.4.tar.xz" 
-	)
-for i in "${files[@]}"
-do
-  tar xvfJ $i && cd ${i%.tar.xz} && sudo ./autogen.sh && sudo ./configure && sudo make -j8 && sudo make install && sudo ldconfig && cd ..
-done
-tar xvfJ gst-python-1.10.4.tar.xz && cd gst-python-1.10.4 && sudo ./configure && sudo make && sudo make install && sudo ldconfig && cd .. &&
-cd .. &&
-#sudo apt-get install -y gstreamer1.0-* &&
+sudo apt-get install -y gstreamer1.0-* &&
 #GStreamer header packages
-#sudo apt-get install -y libgstreamer1.0-* libgstreamer-plugins-base1.0-* libgstreamer-plugins-good1.0-* libgstreamer-plugins-bad1.0-* &&
+sudo apt-get install -y libgstreamer1.0-* libgstreamer-plugins-base1.0-* libgstreamer-plugins-good1.0-* libgstreamer-plugins-bad1.0-* &&
 sudo apt-get install -y python3-pip &&
 sudo apt-get install -y python-pip &&
 sudo apt-get install -y ninja-build &&
@@ -99,21 +71,21 @@ git config --global core.fileMode false &&
 cd /home/tamim &&
 #git clone https://github.com/tamimcse/ns-3-dev-git.git &&
 git clone https://github.com/tamimcse/Linux.git &&
-git clone https://github.com/tamimcse/dpdk &&
-git clone https://github.com/tamimcse/gst-streamer.git &&
+#git clone https://github.com/tamimcse/dpdk &&
+#git clone https://github.com/tamimcse/gst-streamer.git &&
 #git clone https://github.com/tamimcse/libfreenect2.git &&
 #git clone https://github.com/tamimcse/OpenHMD.git &&
-git clone https://github.com/rampageX/firmware-mod-kit &&
-git clone https://github.com/wkennington/linux-firmware &&
+#git clone https://github.com/rampageX/firmware-mod-kit &&
+#git clone https://github.com/wkennington/linux-firmware &&
 git clone git://github.com/mininet/mininet &&
-git clone https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git &&
+#git clone https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git &&
 #git clone https://git.lede-project.org/source.git lede &&
 #cd lede && ./scripts/feeds update -a && ./scripts/feeds install -a && git config core.fileMode && cd .. &&
-git config --global core.compression 0 &&
-git clone --depth 1 https://_tamim_@bitbucket.org/_tamim_/research.git &&
-cd research &&
-git fetch --unshallow &&
-cd .. &&
+#git config --global core.compression 0 &&
+#git clone --depth 1 https://_tamim_@bitbucket.org/_tamim_/research.git &&
+#cd research &&
+#git fetch --unshallow &&
+#cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/website.git && 
 sudo chmod a+rwx -R * &&
 cd Linux && git config core.fileMode false && cd .. &&
@@ -145,7 +117,7 @@ sudo chmod a+rwx smartgit-17_1_3.deb &&
 sudo dpkg -i smartgit-17_1_3.deb &&
 sudo apt-get -f install &&
 cd .. &&
-sudo rm -R openflow &&
+sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
 #
