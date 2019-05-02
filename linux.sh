@@ -63,6 +63,8 @@ sudo apt-get install -y flex yasm &&
 sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
+#Install Verilog
+sudo apt-get install -y iverilog gtkwave &&
 git config --global user.name "tamimcse" &&
 git config --global user.email "tamim@csebuet.org" &&
 git config --global credential.helper cache &&
