@@ -88,7 +88,7 @@ git clone git://github.com/mininet/mininet &&
 #cd research &&
 #git fetch --unshallow &&
 #cd .. &&
-git clone https://_tamim_@bitbucket.org/_tamim_/website.git && 
+git clone https://github.com/tamimcse/tamimcse.github.io && 
 sudo chmod a+rwx -R * &&
 cd Linux && git config core.fileMode false && cd .. &&
 cd dpdk && git config core.fileMode false && cd .. &&
