@@ -94,7 +94,7 @@ cd Linux && git config core.fileMode false && cd .. &&
 cd dpdk && git config core.fileMode false && cd .. &&
 #cd ns-3-dev-git && git config core.fileMode false && cd .. &&
 cd research && git config core.fileMode false && cd .. &&
-cd website && git config core.fileMode false && cd .. &&
+cd tamimcse.github.io && git config core.fileMode false && cd .. &&
 cd gst-streamer && git config core.fileMode false && cd .. &&
 cd iproute2 && git config core.fileMode false &&  sudo ./configure && make -j8 && sudo make install && cd .. &&
 cd Linux &&
