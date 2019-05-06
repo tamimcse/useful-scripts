@@ -65,6 +65,10 @@ sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave &&
+#Set path variables for Domino
+echo 'export PATH="$PATH:/home/tamim/sketch-1.6.9/sketch-frontend"' >> .bashrc &&
+echo 'export SKETCH_HOME="/home/tamim/sketch-1.6.9/sketch-frontend/runtime"' >> .bashrc &&
+echo 'export CLANG_DEV_LIBS="/home/tamim/clang+llvm-3.5.0-x86_64-linux-gnu"' >> .bashrc &&
 git config --global user.name "tamimcse" &&
 git config --global user.email "tamim@csebuet.org" &&
 git config --global credential.helper cache &&
