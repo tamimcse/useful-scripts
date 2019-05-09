@@ -64,7 +64,7 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Install Verilog
-sudo apt-get install -y iverilog gtkwave &&
+sudo apt-get install -y iverilog gtkwave yosys &&
 #Set path variables for Domino
 echo 'export PATH="$PATH:/home/tamim/sketch-1.6.9/sketch-frontend"' >> .bashrc &&
 echo 'export SKETCH_HOME="/home/tamim/sketch-1.6.9/sketch-frontend/runtime"' >> .bashrc &&
