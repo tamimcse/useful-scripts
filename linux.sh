@@ -64,7 +64,7 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Install Verilog
-sudo apt-get install -y iverilog gtkwave yosys &&
+sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
 sudo apt-get install -y scala &&
 #Install Scala sbt
