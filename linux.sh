@@ -2,6 +2,7 @@
 #F10: BIOS, F9: advanced boot, sometimes I had to hold the key down to get it to work
 #sudo apt-get -f install &&
 sudo apt-get install -y git subversion &&
+sudo apt-get install -y apt-file &&
 sudo apt-get install -y netperf inetutils-traceroute &&
 sudo apt-get install -y python-gobject-dev liborc-0.4-dev gir1.2-gst-* &&
 sudo apt-get install -y texstudio texlive-latex-extra texlive-generic-extra texlive-full &&
@@ -64,7 +65,7 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Needed for OpenROAD
-sudo apt-get install -y swig tcl-dev tk-dev &&
+sudo apt-get install -y swig tcl-* tk-dev tk8.5-dev tk8.5-* &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
