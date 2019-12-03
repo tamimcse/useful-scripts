@@ -1,8 +1,9 @@
-linux.sh       --- I use this script to install all the necessary software needed for me (Run it after installing the OS).
-hyperthread.sh --- Disables hyperthreading and CPU frequency scaling.
-grub.sh        --- I use this script to set kernel parameters such as HUGE PAGE, isolcpus, IO MMU, IRQ affinity, tickless kernel and so on.
+install_ubuntu.sh  --- Install all the necessary software needed for me (I run it after installing the OS).
 kexec.sh       --- Install all kernel and all the modules and then restart the kernel with kexec (helpful for kernel development)
 module.sh      --- Unload and reload a module (helpful for kernel development)
+hyperthread.sh --- Disables hyperthreading and CPU frequency scaling.
+grub.sh        --- I use this script to set kernel parameters such as HUGE PAGE, isolcpus, IO MMU, IRQ affinity, tickless kernel and so on.
 pcap-dest.sh   --- Parses a pcap file and extracts destination IP addresses.
+
 
 
