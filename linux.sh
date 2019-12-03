@@ -64,7 +64,7 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Needed for OpenROAD
-sudo apt-get install -y swig tcl-dev &&
+sudo apt-get install -y swig tcl-dev tk-dev &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
