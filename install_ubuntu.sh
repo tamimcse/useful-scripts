@@ -67,6 +67,8 @@ sudo apt-get install -y libreadline-dev &&
 sudo apt-get install -y tcl-dev tk-dev swig &&
 #Add TCL include directory to gcc include directory
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
+#Needed for RePlAce
+sudo apt-get install -y libsparsehash-dev &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
