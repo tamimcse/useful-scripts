@@ -86,18 +86,8 @@ git config --global credential.helper cache &&
 git config --global credential.helper 'cache --timeout=3600' &&
 git config --global core.fileMode false &&
 cd /home/tamim &&
-#git clone https://github.com/tamimcse/ns-3-dev-git.git &&
 git clone https://github.com/tamimcse/Linux.git &&
-#git clone https://github.com/tamimcse/dpdk &&
-#git clone https://github.com/tamimcse/gst-streamer.git &&
-#git clone https://github.com/tamimcse/libfreenect2.git &&
-#git clone https://github.com/tamimcse/OpenHMD.git &&
-#git clone https://github.com/rampageX/firmware-mod-kit &&
-#git clone https://github.com/wkennington/linux-firmware &&
 git clone git://github.com/mininet/mininet &&
-#git clone https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git &&
-#git clone https://git.lede-project.org/source.git lede &&
-#cd lede && ./scripts/feeds update -a && ./scripts/feeds install -a && git config core.fileMode && cd .. &&
 #git config --global core.compression 0 &&
 #git clone --depth 1 https://_tamim_@bitbucket.org/_tamim_/research.git &&
 #cd research &&
@@ -107,7 +97,6 @@ git clone https://github.com/tamimcse/tamimcse.github.io &&
 sudo chmod a+rwx -R * &&
 cd Linux && git config core.fileMode false && cd .. &&
 cd dpdk && git config core.fileMode false && cd .. &&
-#cd ns-3-dev-git && git config core.fileMode false && cd .. &&
 cd research && git config core.fileMode false && cd .. &&
 cd tamimcse.github.io && git config core.fileMode false && cd .. &&
 cd gst-streamer && git config core.fileMode false && cd .. &&
@@ -115,14 +104,9 @@ cd iproute2 && git config core.fileMode false &&  sudo ./configure && make -j8 &
 cd Linux &&
 make defconfig &&
 cd .. &&
-#cd ns-3-dev-git &&
-#sudo ./waf configure --enable-examples &&
-#cd .. &&
 cd mininet/util/ &&
 sudo ./install.sh -fnv &&
 cd ../../ &&
-#cd OpenHMD && sudo ./autogen.sh && sudo ./configure && sudo make -j8 && sudo make install && cd .. &&
-#cd libfreenect2 && sudo mkdir build && cd build && sudo cmake .. && sudo make && sudo make install && cd .. &&
 cd Downloads &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
