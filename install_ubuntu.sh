@@ -65,8 +65,8 @@ sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig &&
-#set path variable for TCL
-echo 'export PATH="$PATH:/usr/include/tcl"' >> .bashrc &&
+#Add TCL include directory to gcc include directory
+echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
