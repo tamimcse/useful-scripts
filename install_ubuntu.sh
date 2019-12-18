@@ -70,7 +70,7 @@ echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc
 #Needed for RePlAce
 sudo apt-get install -y libsparsehash-dev &&
 #Needed for Qflow
-sudo apt-get install -y graywolf netgen &&
+sudo apt-get install -y graywolf netgen python3-tk &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
