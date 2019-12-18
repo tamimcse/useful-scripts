@@ -69,6 +69,8 @@ sudo apt-get install -y tcl-dev tk-dev swig &&
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Needed for RePlAce
 sudo apt-get install -y libsparsehash-dev &&
+#Needed for Qflow
+sudo apt-get install -y graywolf netgen &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Scala
