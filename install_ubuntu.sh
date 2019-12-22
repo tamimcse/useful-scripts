@@ -10,7 +10,7 @@ sudo apt-get install -y kexec-tools &&
 sudo apt-get install -y openjdk-8-jre-headless &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
-sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools cmake libboost-all-dev gcc-multilib libedit-dev libclang-dev &&
+sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools cmake libboost-all-dev gcc-multilib libedit-dev libclang-dev libcairo2-dev &&
 sudo apt-get install -y g++ &&
 #BPF compiler
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
