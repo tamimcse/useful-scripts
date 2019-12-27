@@ -73,7 +73,8 @@ sudo apt-get install -y libsparsehash-dev &&
 sudo apt-get install -y graywolf netgen python3-tk &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
-#Scala
+#Needed for PyMTL
+sudo apt-get install -y python-virtualenv verilator &&
 sudo apt-get install -y scala &&
 #Install Scala sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list &&
