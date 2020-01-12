@@ -75,6 +75,8 @@ sudo apt-get install -y graywolf netgen python3-tk &&
 sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 #Needed for PyMTL
 sudo apt-get install -y python-virtualenv verilator &&
+#Needed for sv2v
+sudo apt-get install -y haskell-stack &&
 sudo apt-get install -y scala &&
 #Install Scala sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list &&
