@@ -79,6 +79,10 @@ sudo apt-get install -y python-virtualenv verilator &&
 sudo apt-get install -y haskell-stack &&
 #Needed for Bambu HLS
 sudo apt-get install -y g++-6 gcc-4.9-plugin-dev gcc-5-plugin-dev g++-4.8-multilib g++-4.9-multilib g++-5-multilib gfortran-4.8-multilib gfortran-4.9-multilib gfortran-4.8 gfortran-5-multilib clang-4.0 libclang-4.0-dev libsuitesparse-dev libglpk-dev libmpfi-dev libbdd-dev &&
+#Installing gcc-7 and g++-7 needed for Bambu
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test &&
+sudo apt-get update &&
+sudo apt-get install -y gcc-7 g++-7 &&
 sudo apt-get install -y scala &&
 #Install Scala sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list &&
