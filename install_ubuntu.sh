@@ -77,6 +77,8 @@ sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 sudo apt-get install -y python-virtualenv verilator &&
 #Needed for sv2v
 sudo apt-get install -y haskell-stack &&
+#Needed for Bambu HLS
+sudo apt-get install -y gcc-4.9-plugin-dev gcc-5-plugin-dev g++-4.9-multilib g++-5-multilib gfortran-4.8 libsuitesparse-dev libglpk-dev &&
 sudo apt-get install -y scala &&
 #Install Scala sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list &&
