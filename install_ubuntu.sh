@@ -77,12 +77,10 @@ sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
 sudo apt-get install -y python-virtualenv verilator &&
 #Needed for sv2v
 sudo apt-get install -y haskell-stack &&
-#Needed for Bambu HLS
-sudo apt-get install -y g++-6 gcc-4.9-plugin-dev gcc-5-plugin-dev g++-4.8-multilib g++-4.9-multilib g++-5-multilib gfortran-4.8-multilib gfortran-4.9-multilib gfortran-4.8 gfortran-5-multilib clang-4.0 libclang-4.0-dev libsuitesparse-dev libglpk-dev libmpfi-dev libbdd-dev &&
-#Installing gcc-7 and g++-7 needed for Bambu
+#Needed for Bambu HLS. Installing gcc-7 and g++-7 need adding PPA
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test &&
 sudo apt-get update &&
-sudo apt-get install -y gcc-7 g++-7 &&
+sudo apt install -y autoconf autoconf-archive automake libtool g++ gcc-4.8 g++-4.8 gcc-4.9 g++-4.9 gcc-5 g++-5 gcc-6 g++-6 gcc-4.8-plugin-dev gcc-4.9-plugin-dev gcc-5-plugin-dev gcc-6-plugin-dev gcc-4.8-multilib gcc-4.9-multilib gcc-5-multilib gcc-6-multilib g++-4.8-multilib g++-4.9-multilib g++-5-multilib g++-6-multilib gfortran-4.8 gfortran-4.8-multilib gfortran-4.9 gfortran-4.9-multilib gfortran-5 gfortran-5-multilib gfortran-6 gfortran-6-multilib clang-4.0 libclang-4.0-dev libbdd-dev libboost-all-dev libmpc-dev libmpfr-dev libxml2-dev liblzma-dev libmpfi-dev zlib1g-dev libicu-dev bison doxygen flex graphviz iverilog verilator make libsuitesparse-dev libglpk-dev &&
 sudo apt-get install -y scala &&
 #Install Scala sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list &&
