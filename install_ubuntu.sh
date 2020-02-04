@@ -124,6 +124,9 @@ sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
 cd .. &&
 cd Downloads &&
+wget https://go.skype.com/skypeforlinux-64.deb &&
+sudo chmod a+rwx skypeforlinux-64.deb &&
+sudo apt-get install ./skypeforlinux-64.deb &&
 wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_1_3.deb &&     
 sudo chmod a+rwx smartgit-17_1_3.deb &&
 sudo dpkg -i smartgit-17_1_3.deb &&
