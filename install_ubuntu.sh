@@ -39,7 +39,7 @@ sudo apt-get install -y libx264-dev &&
 #Needed for GStreamer
 sudo apt-get install -y flex yasm &&
 #intsall latest NVIDIA driver (needed for good display)
-sudo add-apt-repository ppa:graphics-drivers/ppa &&
+sudo add-apt-repository -y ppa:graphics-drivers/ppa &&
 sudo apt-get update -y &&
 sudo apt-get install -y nvidia-361 nvidia-prime &&
 #Needed for NVIDIA graphics driver, lsscsi, lstopo(shows cpu and PCIe topology), DPDK command
@@ -119,6 +119,8 @@ cd mininet/util/ &&
 sudo ./install.sh -fnv &&
 cd ../../ &&
 cd Downloads &&
+#Default option installs old version of boost. Also download newer version of BOOST (needed for TritonRoute)
+wget https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
