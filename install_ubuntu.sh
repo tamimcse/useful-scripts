@@ -119,7 +119,7 @@ cd mininet/util/ &&
 sudo ./install.sh -fnv &&
 cd ../../ &&
 cd Downloads &&
-#Default option installs old version of boost. Also download newer version of BOOST (needed for TritonRoute)
+#Default option installs old version of boost. Also download BOOST 1.68 (needed for TritonRoute)
 wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
 tar xvzf boost_1_68_0.tar.gz &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
@@ -133,6 +133,10 @@ sudo apt-get install ./skypeforlinux-64.deb &&
 wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_1_3.deb &&     
 sudo chmod a+rwx smartgit-17_1_3.deb &&
 sudo dpkg -i smartgit-17_1_3.deb &&
+#Install Klayout (GDSII viewer)
+wget https://www.klayout.org/downloads/Ubuntu-16/klayout_0.26.3-1_amd64.deb &&
+sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
+sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
 sudo rm -R openflow
