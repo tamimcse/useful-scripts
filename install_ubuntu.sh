@@ -119,9 +119,14 @@ cd mininet/util/ &&
 sudo ./install.sh -fnv &&
 cd ../../ &&
 cd Downloads &&
-#Default option installs old version of boost. Also download BOOST 1.68 (needed for TritonRoute)
+#Default option installs old version of boost. So Install BOOST 1.68 (needed for TritonRoute)
 wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
 tar xvzf boost_1_68_0.tar.gz &&
+cd boost_1_68_0 &&
+./bootstrap.sh --prefix=/usr &&
+./b2 stage threading=multi link=shared &&
+./b2 install threading=multi link=shared &&
+cd .. &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
