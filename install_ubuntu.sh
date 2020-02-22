@@ -127,6 +127,14 @@ cd boost_1_68_0 &&
 ./b2 stage threading=multi link=shared &&
 ./b2 install threading=multi link=shared &&
 cd .. &&
+#Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute)
+wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
+tar xvzf zlib-1.2.11.tar.gz &&
+cd zlib-1.2.11 &&
+./configure --prefix=/usr &&
+sudo make &&
+sudo make install &&
+cd .. &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
