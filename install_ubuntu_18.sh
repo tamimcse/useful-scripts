@@ -69,7 +69,6 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Gnome tweak tool
-sudo add-apt-repository universe &&
 sudo apt install gnome-tweak-tool &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig &&
