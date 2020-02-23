@@ -52,9 +52,8 @@ sudo apt-get install -y lsscsi cpuset sysstat rt-tests libnuma-dev hwloc &&
 sudo apt-get install -y libvirt-bin libvirt-dev &&
 #DVD burner
 sudo apt-get install -y k3b &&
-sudo apt-get install -y gstreamer1.0-* &&
-#GStreamer header packages
-sudo apt-get install -y libgstreamer1.0-* libgstreamer-plugins-base1.0-* libgstreamer-plugins-good1.0-* libgstreamer-plugins-bad1.0-* &&
+#Installing GStreamer
+sudo apt-get install -y libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio &&
 sudo apt-get install -y python3-pip &&
 sudo apt-get install -y python-pip &&
 sudo apt-get install -y ninja-build &&
