@@ -138,7 +138,7 @@ wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_1_3.deb &
 sudo chmod a+rwx smartgit-17_1_3.deb &&
 sudo dpkg -i smartgit-17_1_3.deb &&
 #Install Klayout (GDSII viewer)
-wget https://www.klayout.org/downloads/Ubuntu-16/klayout_0.26.3-1_amd64.deb &&
+wget https://www.klayout.org/downloads/Ubuntu-18/klayout_0.26.3-1_amd64.deb &&
 sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
 sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
