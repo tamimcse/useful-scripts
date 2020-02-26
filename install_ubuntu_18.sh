@@ -142,6 +142,21 @@ sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
 sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
+#Default option installs old version of boost. So Install BOOST 1.68 (needed for TritonRoute)
+wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
+tar xvzf boost_1_68_0.tar.gz &&
+cd boost_1_68_0 &&
+./bootstrap.sh --prefix=/usr &&
+./b2 stage threading=multi link=shared &&
+./b2 install threading=multi link=shared &&
+cd .. &&
+#Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute)
+wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
+tar xvzf zlib-1.2.11.tar.gz &&
+cd zlib-1.2.11 &&
+./configure --prefix=/usr &&
+sudo make &&
+sudo make install &&
 sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
