@@ -102,28 +102,55 @@ git config --global user.email "tamim@csebuet.org" &&
 git config --global credential.helper cache &&
 git config --global credential.helper 'cache --timeout=3600' &&
 git config --global core.fileMode false &&
+mkdir tamim &&
 cd /home/tamim &&
-git clone https://github.com/tamimcse/Linux.git &&
+#Build BOOST 1.55.0 locally (Needed for Aladdin).
+wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz &&
+tar -xzvf boost_1_55_0.tar.gz &&
+cd boost_1_55_0 &&
+./bootstrap.sh &&
+mkdir build &&
+./b2 --build-dir=./build --with-graph --with-regex &&
+#Build BOOST 1.68 locally (needed for TritonRoute). Don't install Boost
+wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
+tar xvzf boost_1_68_0.tar.gz &&
+cd boost_1_68_0 &&
+./bootstrap.sh &&
+./b2 install --with-iostreams -j8 &&
+cd .. &&
+#Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute and Aladdin)
+wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
+tar xvzf zlib-1.2.11.tar.gz &&
+cd zlib-1.2.11 &&
+./configure --prefix=/usr &&
+sudo make &&
+sudo make install &&
+sudo rm boost_1_55_0.tar.gz &&
+sudo rm boost_1_68_0.tar.gz &&
+sudo rm zlib-1.2.11.tar.gz &&
+sudo rm -R zlib-1.2.11 &&
+#Install Mininet
 git clone git://github.com/mininet/mininet &&
+cd mininet/util/ &&
+sudo ./install.sh -fnv &&
+cd ../../ &&
+#git clone https://github.com/tamimcse/Linux.git &&
 #git config --global core.compression 0 &&
 #git clone --depth 1 https://_tamim_@bitbucket.org/_tamim_/research.git &&
 #cd research &&
 #git fetch --unshallow &&
 #cd .. &&
-git clone https://github.com/tamimcse/tamimcse.github.io && 
-sudo chmod a+rwx -R * &&
-cd Linux && git config core.fileMode false && cd .. &&
-cd dpdk && git config core.fileMode false && cd .. &&
-cd research && git config core.fileMode false && cd .. &&
-cd tamimcse.github.io && git config core.fileMode false && cd .. &&
-cd gst-streamer && git config core.fileMode false && cd .. &&
-cd iproute2 && git config core.fileMode false &&  sudo ./configure && make -j8 && sudo make install && cd .. &&
-cd Linux &&
-make defconfig &&
-cd .. &&
-cd mininet/util/ &&
-sudo ./install.sh -fnv &&
-cd ../../ &&
+#git clone https://github.com/tamimcse/tamimcse.github.io && 
+#sudo chmod a+rwx -R * &&
+#cd Linux && git config core.fileMode false && cd .. &&
+#cd dpdk && git config core.fileMode false && cd .. &&
+#cd research && git config core.fileMode false && cd .. &&
+#cd tamimcse.github.io && git config core.fileMode false && cd .. &&
+#cd gst-streamer && git config core.fileMode false && cd .. &&
+#cd iproute2 && git config core.fileMode false &&  sudo ./configure && make -j8 && sudo make install && cd .. &&
+#cd Linux &&
+#make defconfig &&
+#cd .. &&
 cd Downloads &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
@@ -142,27 +169,6 @@ sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
 sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
-#Build BOOST 1.55.0 locally (Needed for Aladdin). Don't install Boost
-wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz &&
-tar -xzvf boost_1_55_0.tar.gz &&
-cd boost_1_55_0 &&
-./bootstrap.sh &&
-mkdir build &&
-./b2 --build-dir=./build --with-graph --with-regex &&
-#Build BOOST 1.68 locally (needed for TritonRoute). Don't install Boost
-wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
-tar xvzf boost_1_68_0.tar.gz &&
-cd boost_1_68_0 &&
-./bootstrap.sh &&
-./b2 stage threading=multi link=shared &&
-cd .. &&
-#Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute)
-wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
-tar xvzf zlib-1.2.11.tar.gz &&
-cd zlib-1.2.11 &&
-./configure --prefix=/usr &&
-sudo make &&
-sudo make install &&
 sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
