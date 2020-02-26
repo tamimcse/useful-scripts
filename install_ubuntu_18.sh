@@ -142,13 +142,19 @@ sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
 sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
-#Default option installs old version of boost. So Install BOOST 1.68 (needed for TritonRoute)
+#Build BOOST 1.55.0 locally (Needed for Aladdin). Don't install Boost
+wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz &&
+tar -xzvf boost_1_55_0.tar.gz &&
+cd boost_1_55_0 &&
+./bootstrap.sh &&
+mkdir build &&
+./b2 --build-dir=./build --with-graph --with-regex &&
+#Build BOOST 1.68 locally (needed for TritonRoute). Don't install Boost
 wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
 tar xvzf boost_1_68_0.tar.gz &&
 cd boost_1_68_0 &&
-./bootstrap.sh --prefix=/usr &&
+./bootstrap.sh &&
 ./b2 stage threading=multi link=shared &&
-./b2 install threading=multi link=shared &&
 cd .. &&
 #Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute)
 wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
