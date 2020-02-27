@@ -2,10 +2,10 @@
 #F10: BIOS, F9: advanced boot, sometimes I had to hold the key down to get it to work
 #sudo apt-get -f install &&
 #install Vanilla Gnome
-sudo apt-get upadte &&
-sudo apt install -y gnome-session &&
+#sudo apt-get upadte &&
+#sudo apt install -y gnome-session &&
 #select gnome-shell and press ENTER
-sudo update-alternatives --config gdm3.css &&
+#sudo update-alternatives --config gdm3.css &&
 sudo apt-get install -y git subversion &&
 sudo apt-get install -y netperf inetutils-traceroute &&
 sudo apt-get install -y liborc-0.4-dev gir1.2-gst-* &&
@@ -68,7 +68,7 @@ sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Gnome tweak tool
-sudo apt install gnome-tweak-tool &&
+sudo apt install -y gnome-tweak-tool &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig &&
 #Add TCL include directory to gcc include directory
@@ -102,8 +102,6 @@ git config --global user.email "tamim@csebuet.org" &&
 git config --global credential.helper cache &&
 git config --global credential.helper 'cache --timeout=3600' &&
 git config --global core.fileMode false &&
-mkdir tamim &&
-cd /home/tamim &&
 #Build BOOST 1.55.0 locally (Needed for Aladdin).
 wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz &&
 tar -xzvf boost_1_55_0.tar.gz &&
