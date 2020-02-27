@@ -107,6 +107,7 @@ cd boost_1_55_0 &&
 ./bootstrap.sh &&
 mkdir build &&
 ./b2 --build-dir=./build --with-graph --with-regex &&
+cd .. &&
 #Build BOOST 1.68 locally (needed for TritonRoute). Don't install Boost
 wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
 tar xvzf boost_1_68_0.tar.gz &&
