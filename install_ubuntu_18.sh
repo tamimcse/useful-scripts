@@ -122,6 +122,7 @@ cd zlib-1.2.11 &&
 ./configure --prefix=/usr &&
 sudo make &&
 sudo make install &&
+cd .. &&
 sudo rm boost_1_55_0.tar.gz &&
 sudo rm boost_1_68_0.tar.gz &&
 sudo rm zlib-1.2.11.tar.gz &&
