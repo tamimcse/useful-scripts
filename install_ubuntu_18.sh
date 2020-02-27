@@ -113,6 +113,7 @@ wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &
 tar xvzf boost_1_68_0.tar.gz &&
 cd boost_1_68_0 &&
 mkdir build &&
+#add this prefix. Otherwise it installs in /usr/..
 ./bootstrap.sh -prefix=./build &&
 ./b2 install --with-iostreams -j8 &&
 cd .. &&
