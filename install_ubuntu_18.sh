@@ -78,7 +78,7 @@ sudo apt-get install -y libsparsehash-dev &&
 #Needed for Qflow
 sudo apt-get install -y graywolf python3-tk &&
 #Install Verilog
-sudo apt-get install -y iverilog gtkwave yosys libmotif-dev &&
+sudo apt-get install -y iverilog gtkwave libmotif-dev &&
 #Needed for PyMTL
 sudo apt-get install -y python-virtualenv verilator &&
 #Needed for sv2v
@@ -134,6 +134,35 @@ git clone git://github.com/mininet/mininet &&
 cd mininet/util/ &&
 sudo ./install.sh -fnv &&
 cd ../../ &&
+#Install Yosys from source. Don't install it via apt-get. Apt-get installs old version
+git clone https://github.com/YosysHQ/yosys &&
+cd yosys &&
+git config core.fileMode false &&
+make config-gcc &&
+make -j8 &&
+sudo make install &&
+cd .. &&
+#Install OpenROAD from source
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git &&
+cd OpenROAD &&
+git config core.fileMode false &&
+mkdir build &&
+cd build &&
+cmake .. &&
+make -j8 &&
+sudo make install &&
+cd .. &&
+#Install TritonRoute from source
+git clone https://github.com/The-OpenROAD-Project/TritonRoute &&
+cd TritonRoute &&
+git config core.fileMode false &&
+mkdir build &&
+cd build &&
+#note that Boost 1.68 is installed in /home/tamim/boost_1_68_0/build
+cmake -DBOOST_ROOT=/home/tamim/boost_1_68_0/build ../ &&
+make -j8 &&
+#Set TritonRoute in PATH variable. Don't install it
+echo 'export PATH="$PATH:/home/tamim/TritonRoute/build"' >> .bashrc &&
 #git clone https://github.com/tamimcse/Linux.git &&
 #git config --global core.compression 0 &&
 #git clone --depth 1 https://_tamim_@bitbucket.org/_tamim_/research.git &&
