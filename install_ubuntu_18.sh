@@ -151,7 +151,7 @@ cd build &&
 cmake .. &&
 make -j8 &&
 sudo make install &&
-cd .. &&
+cd ../../ &&
 #Install TritonRoute from source
 git clone https://github.com/The-OpenROAD-Project/TritonRoute &&
 cd TritonRoute &&
@@ -161,6 +161,7 @@ cd build &&
 #note that Boost 1.68 is installed in /home/tamim/boost_1_68_0/build
 cmake -DBOOST_ROOT=/home/tamim/boost_1_68_0/build ../ &&
 make -j8 &&
+cd ../../ &&
 #Set TritonRoute in PATH variable. Don't install it
 echo 'export PATH="$PATH:/home/tamim/TritonRoute/build"' >> .bashrc &&
 #git clone https://github.com/tamimcse/Linux.git &&
