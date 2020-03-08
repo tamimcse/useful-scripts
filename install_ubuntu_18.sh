@@ -83,6 +83,8 @@ cd netgen &&
 ./configure &&
 make -j8 &&
 sudo make install &&
+cd .. &&
+sudo rm -R netgen/ &&
 #Needed for OpenRAM
 sudo apt-get install -y ngspice &&
 #Install Verilog
