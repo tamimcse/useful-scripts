@@ -200,6 +200,9 @@ cd Downloads &&
 wget https://go.skype.com/skypeforlinux-64.deb &&
 sudo chmod a+rwx skypeforlinux-64.deb &&
 sudo apt-get install ./skypeforlinux-64.deb &&
+wget https://zoom.us/client/latest/zoom_amd64.deb &&
+sudo chmod a+rwx zoom_amd64.deb &&
+sudo apt-get install -y ./zoom_amd64.deb &&
 wget https://www.syntevo.com/downloads/smartgit/smartgit-19_1_6.deb &&
 sudo chmod a+rwx -R smartgit-19_1_6.deb &&
 sudo apt install ./smartgit-19_1_6.deb &&
