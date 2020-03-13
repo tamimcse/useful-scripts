@@ -203,6 +203,8 @@ sudo apt-get install ./skypeforlinux-64.deb &&
 wget https://zoom.us/client/latest/zoom_amd64.deb &&
 sudo chmod a+rwx zoom_amd64.deb &&
 sudo apt-get install -y ./zoom_amd64.deb &&
+#install Discord
+sudo snap install discord --classic &&
 wget https://www.syntevo.com/downloads/smartgit/smartgit-19_1_6.deb &&
 sudo chmod a+rwx -R smartgit-19_1_6.deb &&
 sudo apt install ./smartgit-19_1_6.deb &&
