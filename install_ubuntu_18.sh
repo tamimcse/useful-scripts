@@ -88,9 +88,9 @@ sudo rm -R netgen/ &&
 #Needed for OpenRAM
 sudo apt-get install -y ngspice &&
 #Needed for OpenRAM
-pip3 install numpy &&
-#Needed for OpenRAM
-pip3 install scipy &&
+pip3 install numpy scipy &&
+#Needed for AMC
+pip install numpy scipy &&
 #Install Verilog
 sudo apt-get install -y iverilog gtkwave libmotif-dev &&
 #Needed for PyMTL
