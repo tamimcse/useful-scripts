@@ -199,8 +199,6 @@ cd Downloads &&
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
-cd .. &&
-cd Downloads &&
 wget https://go.skype.com/skypeforlinux-64.deb &&
 sudo chmod a+rwx skypeforlinux-64.deb &&
 sudo apt-get install ./skypeforlinux-64.deb &&
@@ -218,6 +216,10 @@ sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
 sudo apt install ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
+#intsall Wireshark
+sudo add-apt-repository -y ppa:wireshark-dev/stable &&
+sudo apt-get update -y &&
+sudo apt -y install wireshark &&
 sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
