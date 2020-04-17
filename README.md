@@ -1,6 +1,6 @@
-`install_ubuntu.sh`
+`install_ubuntu_18.sh`
 ==================
-Install all the necessary software needed for me (I run it after installing the OS).
+Install all the necessary softwares needed for me (I run it after installing the OS).
 
 `kexec.sh`
 ==========
