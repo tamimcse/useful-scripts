@@ -11,7 +11,7 @@ parse-pcap-ip6.sh   --- Parses a pcap file and extracts destination IPv6 address
 ===================
 It parses BGPdump -m output file and extract routing table for each ISP. 
 
-The routes are produced from the actual RIB snapshot of http://www.routeviews.org/routeviews/ (ftp://archive.routeviews.org/route-views.chicago/bgpdata/2019.08/RIBS/rib.20190824.2200.bz2 to be exact). Each RIB snapshots however contains routes from multiple peers (ISPs). Moreover the snapshots are in MRT format (not human headable). We extract the actual routing table from the RIB snopshot as following:
+The routes are produced from the actual RIB snapshot of http://www.routeviews.org/routeviews/ (ftp://archive.routeviews.org/route-views.chicago/bgpdata/2019.08/RIBS/rib.20190824.2200.bz2 to be exact). Each RIB snapshot however contains routes from multiple peers (ISPs). Moreover the snapshots are in MRT format (not human headable). We extract the actual routing table from the RIB snopshot as following:
 
 1. We use BGPdump (https://github.com/tamimcse/bgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
 2. Then we use parse-bgpdump.sh to convert the bgpdump output file into routes-*. parse-bgpdump.sh internally uses parse-bgpdump.py which performs the actual conversion.
