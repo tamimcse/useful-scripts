@@ -4,7 +4,7 @@ module.sh      --- Unload and reload a module (helpful for kernel development)
 hyperthread.sh --- Disables hyperthreading and CPU frequency scaling.
 grub.sh        --- I use this script to set kernel parameters such as HUGE PAGE, isolcpus, IO MMU, IRQ affinity, tickless kernel and so on.
 create_patch.sh --- Useful for creating patch for Linux kernel
-pcap-dest.sh   --- Parses a pcap file and extracts destination IP addresses.
+parse-pcap-ip4.sh   --- Parses a pcap file and extracts destination IPv4 addresses.
 
 
 
