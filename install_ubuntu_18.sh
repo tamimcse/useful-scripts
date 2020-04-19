@@ -15,7 +15,7 @@ sudo apt-get install -y kexec-tools &&
 sudo apt-get install -y openjdk-8-jre-headless &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
-sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools cmake libboost-all-dev qt5-default gcc-multilib libedit-dev libclang-dev libcairo2-dev &&
+sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev qt5-default gcc-multilib libedit-dev libclang-dev libcairo2-dev &&
 sudo apt-get install -y g++ &&
 #BPF compiler
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
@@ -156,6 +156,15 @@ make config-gcc &&
 make -j8 &&
 sudo make install &&
 cd .. &&
+cd Downloads &&
+#apt install cmake installs cmake 10.2. OpenROAD requires higer version. So we install cmake from source
+wget https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1.tar.gz &&
+tar xvzf cmake-3.17.1.tar.gz &&
+cd cmake-3.17.1 &&
+./bootstrap &&
+sudo make -j8 &&
+sudo make install &&
+cd .. &&
 #Install OpenROAD from source
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git &&
 cd OpenROAD &&
@@ -163,7 +172,8 @@ git config core.fileMode false &&
 mkdir build &&
 cd build &&
 cmake .. &&
-make -j8 &&
+#don't use make -j8. It fails
+make &&
 sudo make install &&
 cd ../../ &&
 #Install TritonRoute from source
