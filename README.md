@@ -28,7 +28,7 @@ Parses a pcap file and extracts destination IPv4 addresses.
 
 `parse-pcap-ip6.sh`
 ===================
-Parses a pcap file and extracts destination IPv6 addresses.
+Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html
 
 `parse-bgpdump.sh`
 ===================
