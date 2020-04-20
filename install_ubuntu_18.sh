@@ -70,7 +70,7 @@ sudo apt-get install -y libreadline-dev &&
 #Gnome tweak tool
 sudo apt install -y gnome-tweak-tool &&
 #Needed for OpenROAD
-sudo apt-get install -y tcl-dev tk-dev swig &&
+sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev &&
 #Add TCL include directory to gcc include directory
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Needed for RePlAce
