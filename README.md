@@ -1,8 +1,6 @@
 Some useful scripts. 
 
-* `install_ubuntu_18.sh`
-
-Install all the necessary softwares needed for me (I run it after installing the OS).
+* `install_ubuntu_18.sh`: Install all the necessary softwares needed for me (I run it after installing the OS).
 
 * `kexec.sh`
 
