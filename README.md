@@ -18,10 +18,10 @@ Some useful scripts.
 
 * `parse-pcap-ip6.sh`: Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from 'http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html'
 
-* `parse-bgpdump.sh`: It parses BGPdump -m output file and extract routing table for each ISP. 
+* `parse-bgpdump.sh`: It parses BGPdump -m output file and extract routing table for each ISP.
 
-Parsing BGPdump
-==================
+Steps to get FIBs of core routers
+=================================
 
 1. Download RIB snapshot from `http://www.routeviews.org/routeviews/`(we download `ftp://archive.routeviews.org/route-views.chicago/bgpdata/2019.08/RIBS/rib.20190824.2200.bz2`).
 
