@@ -1,34 +1,22 @@
 Some useful scripts. 
 
-* `install_ubuntu_18.sh`: Install all the necessary softwares needed for me (I run it after installing the OS).
+* `install_ubuntu_18.sh`: Install all the necessary softwares on Ubuntu 18.04 (I run it after installing the OS).
 
-* `kexec.sh`
+* `install_ubuntu_16.sh`: Install all the necessary softwares on Ubuntu 16.04 (I run it after installing the OS).
 
-Install all kernel and all the modules and then restart the kernel with kexec (helpful for kernel development)
+* `kexec.sh`: Install all kernel and all the modules and then restart the kernel with kexec (helpful for kernel development)
 
-`module.sh`
-===========
-Unload and reload a module (helpful for kernel development)
+* `module.sh` : Unload and reload a module (helpful for kernel development)
 
-`hyperthread.sh`
-==============
-Disables hyperthreading and CPU frequency scaling.
+* `hyperthread.sh`: Disables hyperthreading and CPU frequency scaling.
 
-`grub.sh`
-========
-I use this script to set kernel parameters such as HUGE PAGE, isolcpus, IO MMU, IRQ affinity, tickless kernel and so on.
+* `grub.sh` : I use this script to set kernel parameters such as HUGE PAGE, isolcpus, IO MMU, IRQ affinity, tickless kernel and so on.
 
-`create_patch.sh` 
-===================
-Useful for creating patch for Linux kernel
+* `create_patch.sh` : Useful for creating patch for Linux kernel
 
-`parse-pcap-ip4.sh`
-===================
-Parses a pcap file and extracts destination IPv4 addresses.
+* `parse-pcap-ip4.sh`: Parses a pcap file and extracts destination IPv4 addresses.
 
-`parse-pcap-ip6.sh`
-===================
-Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html
+* `parse-pcap-ip6.sh`: Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html
 
 `parse-bgpdump.sh`
 ===================
