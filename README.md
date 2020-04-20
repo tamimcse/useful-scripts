@@ -16,16 +16,19 @@ Some useful scripts.
 
 * `parse-pcap-ip4.sh`: Parses a pcap file and extracts destination IPv4 addresses.
 
-* `parse-pcap-ip6.sh`: Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html
+* `parse-pcap-ip6.sh`: Parses a pcap file and extracts destination IPv6 addresses. We get pcap file from 'http://mawi.wide.ad.jp/mawi/samplepoint-F/2019/201908241400.html'
 
-`parse-bgpdump.sh`
-===================
-It parses BGPdump -m output file and extract routing table for each ISP. 
+* `parse-bgpdump.sh`: It parses BGPdump -m output file and extract routing table for each ISP. 
 
-The obtain RIB snapshot from `http://www.routeviews.org/routeviews/` (`ftp://archive.routeviews.org/route-views.chicago/bgpdata/2019.08/RIBS/rib.20190824.2200.bz2` to be exact). Each RIB snapshot however contains routes from multiple peers (ISPs). Moreover the snapshots are in MRT format (not human headable). We extract the actual routing table from the RIB snopshot as following:
+Parsing BGPdump
+==================
 
-1. We use BGPdump (https://github.com/tamimcse/bgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
-2. Then we use `parse-bgpdump.sh` to convert the bgpdump output file into `routes-*`. `parse-bgpdump.sh` internally uses `parse-bgpdump.py` which performs the actual conversion.
+1. Download RIB snapshot from `http://www.routeviews.org/routeviews/`(we download `ftp://archive.routeviews.org/route-views.chicago/bgpdata/2019.08/RIBS/rib.20190824.2200.bz2`).
+
+2. Unzip the snapshot. Each snapshot contains routes from multiple peers (ISPs). The snapshot is in MRT format (not human headable). We extract the actual routing table from the snopshot as following:
+
+* We use BGPdump (https://github.com/tamimcse/bgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
+* Then we use `parse-bgpdump.sh` to convert the bgpdump output file into `routes-*`. `parse-bgpdump.sh` internally uses `parse-bgpdump.py` which performs the actual conversion.
 
 `
 
