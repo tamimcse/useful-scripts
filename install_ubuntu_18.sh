@@ -122,13 +122,14 @@ cd boost_1_55_0 &&
 mkdir build &&
 ./b2 --build-dir=./build --with-graph --with-regex &&
 cd .. &&
-#Build BOOST 1.68 locally (needed for TritonRoute). Don't install Boost
+#Build and Install BOOST 1.68 locally (not in /usr/..) (needed for TritonRoute).
 wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz &&
 tar xvzf boost_1_68_0.tar.gz &&
 cd boost_1_68_0 &&
-mkdir build &&
-#add this prefix. Otherwise it installs in /usr/..
-./bootstrap.sh -prefix=./build &&
+mkdir inst &&
+#add this prefix. This is where boost will be installed. Otherwise it installs in /usr/..
+./bootstrap.sh -prefix=./inst &&
+#Note that, when compiling TritonRoute, you need to pass -DBOOST_ROOT=/home/tamim/boost_1_68_0/inst. -DBOOST_ROOT=/home/tamim/boost_1_68_0/ or -DBOOST_ROOT=../../boost_1_68_0/inst will not work
 ./b2 install --with-iostreams -j8 &&
 cd .. &&
 #Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute and Aladdin)
