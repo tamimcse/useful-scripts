@@ -1,0 +1,9 @@
+If you want to pull 'openroad' branch of OpenROAD, do the following
+
+git fetch origin
+git checkout -f --recurse-submodules origin/openroad
+
+
+
+
+
