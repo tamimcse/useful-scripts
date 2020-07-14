@@ -166,6 +166,15 @@ cd cmake-3.17.1 &&
 sudo make -j8 &&
 sudo make install &&
 cd ../../ &&
+#Install CUDD (Needed for OpenROAD)
+cd Downloads &&
+wget https://davidkebo.com/source/cudd_versions/cudd-3.0.0.tar.gz &&
+tar -xzvf cudd-3.0.0.tar.gz &&
+cd cudd-3.0.0 &&
+./configure &&
+make &&
+sudo make install &&
+cd ../../ &&
 #Install OpenROAD from source
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git &&
 cd OpenROAD &&
