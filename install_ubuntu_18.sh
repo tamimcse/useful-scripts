@@ -43,10 +43,10 @@ sudo apt-get install -y libva-dev vainfo mesa-utils mesa-common-dev inxi &&
 sudo apt-get install -y libx264-dev &&
 #Needed for GStreamer
 sudo apt-get install -y flex yasm &&
-#intsall latest NVIDIA driver (needed for good display)
-sudo add-apt-repository -y ppa:graphics-drivers/ppa &&
-sudo apt-get update -y &&
-sudo apt-get install -y nvidia-361 nvidia-prime &&
+#intsall latest NVIDIA driver (needed for good display, but don't install it on Ubuntu 18.04 beacuse Ubuntu won't be able to reboot)
+#sudo add-apt-repository -y ppa:graphics-drivers/ppa &&
+#sudo apt-get update -y &&
+#sudo apt-get install -y nvidia-361 nvidia-prime &&
 #Needed for NVIDIA graphics driver, lsscsi, lstopo(shows cpu and PCIe topology), DPDK command
 sudo apt-get install -y lsscsi cpuset sysstat rt-tests libnuma-dev hwloc &&
 sudo apt-get install -y libvirt-bin libvirt-dev &&
