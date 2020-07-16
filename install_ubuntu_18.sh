@@ -235,7 +235,7 @@ sudo apt install ./smartgit-19_1_6.deb &&
 #Install Klayout (GDSII viewer)
 wget https://www.klayout.org/downloads/Ubuntu-18/klayout_0.26.3-1_amd64.deb &&
 sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
-sudo apt install ./klayout_0.26.3-1_amd64.deb &&
+sudo apt install -y ./klayout_0.26.3-1_amd64.deb &&
 sudo apt-get -f install &&
 cd .. &&
 #intsall Wireshark
