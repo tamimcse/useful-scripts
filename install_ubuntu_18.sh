@@ -192,8 +192,8 @@ cd TritonRoute &&
 git config core.fileMode false &&
 mkdir build &&
 cd build &&
-#note that Boost 1.68 is installed in /home/tamim/boost_1_68_0/build
-cmake -DBOOST_ROOT=/home/tamim/boost_1_68_0/build ../ &&
+#note that Boost 1.68 is installed in /home/tamim/boost_1_68_0/inst
+cmake -DBOOST_ROOT=/home/tamim/boost_1_68_0/inst ../ &&
 make -j8 &&
 cd ../../ &&
 #Set TritonRoute in PATH variable. Don't install it
