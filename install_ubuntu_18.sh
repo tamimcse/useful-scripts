@@ -69,6 +69,8 @@ sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Gnome tweak tool
 sudo apt install -y gnome-tweak-tool &&
+#GCC Plugin testing
+sudo apt install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev liblemon-dev &&
 #Add TCL include directory to gcc include directory
