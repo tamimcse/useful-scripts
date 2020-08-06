@@ -73,6 +73,15 @@ sudo apt install -y gnome-tweak-tool &&
 sudo apt install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev liblemon-dev &&
+#OpenROAD cannot find installed liblemon-dev. So, install it manually so that it's installed in /usr/local/
+wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz &&
+tar -xzvf lemon-1.3.1.tar.gz &&
+cd lemon-1.3.1 &&
+mkdir build &&
+cd build &&
+cmake .. &&
+make -j8 &&
+sudo make install &&
 #Add TCL include directory to gcc include directory
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Needed for RePlAce
