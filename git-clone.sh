@@ -15,6 +15,10 @@ cd cp-trie && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/onko.git &&
 cd onko && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/fib-lookup-hls.git &&
-cd fib-lookup-hls && git config core.fileMode false && cd ..
+cd fib-lookup-hls && git config core.fileMode false && cd .. &&
+git clone https://github.com/gcc-mirror/gcc &&
+cd gcc && git config core.fileMode false && cd .. &&
+git clone https://_tamim_@bitbucket.org/_tamim_/aladdin.git &&
+cd aladdin && git config core.fileMode false && cd ..
 
 
