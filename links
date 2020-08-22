@@ -6,4 +6,7 @@ http://systems.cs.kent.edu/web.php
 It shows how to create a personal website in wasp or hornet. Note that the final URL should be https://web.cs.kent.edu/~mislam4
 
 
+If we want to upload a file to your SSH directory, follow this: "scp syllabus.doc mislam4@wasp.cs.kent.edu:public_html/cs3"
+
+
 
