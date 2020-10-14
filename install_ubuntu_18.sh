@@ -72,7 +72,7 @@ sudo apt install -y gnome-tweak-tool &&
 #GCC Plugin testing
 sudo apt install -y libaspell-dev &&
 #Needed for OpenROAD
-sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev liblemon-dev &&
+sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev liblemon-dev cimg-dev &&
 #OpenROAD cannot find installed liblemon-dev. So, install it manually so that it's installed in /usr/local/
 wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz &&
 tar -xzvf lemon-1.3.1.tar.gz &&
