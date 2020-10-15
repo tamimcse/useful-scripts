@@ -73,6 +73,15 @@ sudo apt install -y gnome-tweak-tool &&
 sudo apt install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev liblemon-dev cimg-dev &&
+cd Downloads &&
+#apt install cmake installs cmake 10.2. OpenROAD requires higer version. So we install cmake from source
+wget https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1.tar.gz &&
+tar xvzf cmake-3.17.1.tar.gz &&
+cd cmake-3.17.1 &&
+./bootstrap &&
+sudo make -j8 &&
+sudo make install &&
+cd ../../ &&
 #OpenROAD cannot find installed liblemon-dev. So, install it manually so that it's installed in /usr/local/
 wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz &&
 tar -xzvf lemon-1.3.1.tar.gz &&
@@ -82,6 +91,7 @@ cd build &&
 cmake .. &&
 make -j8 &&
 sudo make install &&
+cd ../../ &&
 #Add TCL include directory to gcc include directory
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Needed for RePlAce
@@ -168,15 +178,6 @@ make config-gcc &&
 make -j8 &&
 sudo make install &&
 cd .. &&
-cd Downloads &&
-#apt install cmake installs cmake 10.2. OpenROAD requires higer version. So we install cmake from source
-wget https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1.tar.gz &&
-tar xvzf cmake-3.17.1.tar.gz &&
-cd cmake-3.17.1 &&
-./bootstrap &&
-sudo make -j8 &&
-sudo make install &&
-cd ../../ &&
 #Install CUDD (Needed for OpenROAD)
 cd Downloads &&
 wget https://davidkebo.com/source/cudd_versions/cudd-3.0.0.tar.gz &&
