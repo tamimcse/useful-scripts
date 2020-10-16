@@ -151,7 +151,7 @@ mkdir inst &&
 #add this prefix. This is where boost will be installed. Otherwise it installs in /usr/..
 ./bootstrap.sh -prefix=./inst &&
 #Note that, when compiling TritonRoute, you need to pass -DBOOST_ROOT=/home/tamim/boost_1_68_0/inst. -DBOOST_ROOT=/home/tamim/boost_1_68_0/ or -DBOOST_ROOT=../../boost_1_68_0/inst will not work
-./b2 install --with-iostreams -j8 &&
+./b2 --with-test --with-iostreams install -j8 &&
 cd .. &&
 #Default option installs old version of zlib1g. So Install Zlib 1.2.11 from source (needed for TritonRoute and Aladdin)
 wget https://www.zlib.net/zlib-1.2.11.tar.gz &&
