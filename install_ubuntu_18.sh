@@ -98,7 +98,7 @@ echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc
 sudo apt-get install -y libsparsehash-dev &&
 #Needed for Qflow
 sudo apt-get install -y graywolf python3-tk &&
-#Install netgen manually (apt-get doesn't work on Ubuntu 18.04). This is needed for Qflow
+#Install netgen manually (apt-get doesn't work on Ubuntu 18.04). This is needed for OpenLANE and OpenRAM
 git clone git://opencircuitdesign.com/netgen &&
 cd netgen &&
 ./configure &&
