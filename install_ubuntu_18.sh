@@ -239,6 +239,8 @@ sudo chmod a+rwx zoom_amd64.deb &&
 sudo apt-get install -y ./zoom_amd64.deb &&
 #install Discord
 sudo snap install discord --classic &&
+#install Slack
+sudo snap install slack --classic &&
 #install Docker
 sudo snap install docker &&
 wget https://www.syntevo.com/downloads/smartgit/smartgit-19_1_6.deb &&
