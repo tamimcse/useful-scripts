@@ -105,7 +105,14 @@ cd netgen &&
 make -j8 &&
 sudo make install &&
 cd .. &&
-sudo rm -R netgen/ &&
+#Install magic 8.3 manually (apt-get installs 8.1). This is needed for OpenLANE
+git clone git://opencircuitdesign.com/magic &&
+cd magic &&
+git checkout magic-8.3 &&
+./configure &&
+make -j8 &&
+sudo make install &&
+cd .. &&
 #Needed for OpenRAM
 sudo apt-get install -y ngspice &&
 #Needed for OpenRAM
