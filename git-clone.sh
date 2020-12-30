@@ -29,6 +29,7 @@ mkdir obj &&
 cd obj &&
 #This sude is needed to access /opt/panda
 sudo ../configure --prefix=/opt/panda --enable-flopoco --enable-icarus --enable-verilator --enable-opt --enable-release &&
-make -j8 &&
+#This sudo is also needed
+sudo make -j8 &&
 make install
 
