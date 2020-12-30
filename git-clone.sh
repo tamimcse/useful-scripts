@@ -19,6 +19,15 @@ cd fib-lookup-hls && git config core.fileMode false && cd .. &&
 git clone https://github.com/gcc-mirror/gcc &&
 cd gcc && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/aladdin.git &&
-cd aladdin && git config core.fileMode false && cd ..
-
+cd aladdin && git config core.fileMode false && cd .. &&
+#Install Bambu
+git clone https://github.com/ferrandi/PandA-bambu &&
+cd PandA-bambu && git config core.fileMode false && cd .. &&
+cd PandA-bambu &&
+make -f Makefile.init &&
+mkdir obj &&
+cd obj &&
+../configure --prefix=/opt/panda --enable-flopoco --enable-icarus --enable-verilator --enable-opt --enable-release &&
+make -j8 &&
+make install
 
