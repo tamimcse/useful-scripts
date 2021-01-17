@@ -27,8 +27,9 @@ Steps to get FIBs of core routers
 
 2. Unzip the snapshot. Each snapshot contains routes from multiple peers (ISPs). The snapshot is in MRT format (not human headable). We extract the actual routing table from the snopshot as following:
 
-* We use BGPdump (https://github.com/tamimcse/bgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m.
-* Then we use `parse-bgpdump.sh` to convert the bgpdump output file into `routes-*`. `parse-bgpdump.sh` internally uses `parse-bgpdump.py` which performs the actual conversion.
+* Use BGPdump (https://github.com/tamimcse/bgpdump) to convert the MRT file into a human readable text file. BGPdump has several output mode. Here we use output mode -m. That is, `./bgpdump -m rib.20190824.2200 > output`
+
+* Then use `parse-bgpdump.sh` to convert the bgpdump output file into `routes-*`. `parse-bgpdump.sh` internally uses `parse-bgpdump.py` which performs the actual conversion.
 
 `
 
