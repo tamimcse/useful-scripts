@@ -13,7 +13,7 @@ cd scripts && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/cp-trie.git &&
 cd cp-trie && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/c2rtl.git &&
-cd onko && git config core.fileMode false && cd .. &&
+cd c2rtl && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/fib-lookup-hls.git &&
 cd fib-lookup-hls && git config core.fileMode false && cd .. &&
 git clone https://github.com/gcc-mirror/gcc &&
