@@ -250,6 +250,7 @@ sudo snap install discord --classic &&
 sudo snap install slack --classic &&
 #install Docker
 sudo snap install docker &&
+#Also install microsoft Teams manually. I couldn't wget the deb by a fixed link
 wget https://www.syntevo.com/downloads/smartgit/smartgit-19_1_6.deb &&
 sudo chmod a+rwx -R smartgit-19_1_6.deb &&
 sudo apt install ./smartgit-19_1_6.deb &&
