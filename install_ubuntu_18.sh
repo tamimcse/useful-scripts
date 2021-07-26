@@ -265,6 +265,9 @@ cd .. &&
 sudo add-apt-repository -y ppa:wireshark-dev/stable &&
 sudo apt-get update -y &&
 sudo apt -y install wireshark &&
+#Install Dropbox (https://www.dropbox.com/install-linux)
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - &&
+~/.dropbox-dist/dropboxd &&
 sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
