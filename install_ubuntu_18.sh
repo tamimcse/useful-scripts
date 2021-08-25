@@ -268,9 +268,9 @@ sudo apt -y install wireshark &&
 #Install Dropbox (https://www.dropbox.com/install-linux)
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - &&
 ~/.dropbox-dist/dropboxd &&
-#Install virtual Box
-sudo add-apt-repository multiverse && sudo apt-get update &&
-sudo apt install -y virtualbox &&
+#Install virtual Box (don't do it. It virualbox doesn't work!!!)
+#sudo add-apt-repository multiverse && sudo apt-get update &&
+#sudo apt install -y virtualbox &&
 sudo rm -R openflow
 #Increase heap size of Netbeans manually. Otherwise netbeans often cause trouble parsing kernel code.
 #To do so, open up /usr/local/netbeans-version/etc/netbeans.conf. Change -J-Xms. That is, update 
