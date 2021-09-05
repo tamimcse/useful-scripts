@@ -8,14 +8,12 @@ git config core.fileMode false && cd .. &&
 git clone https://github.com/tamimcse/tamimcse.github.io && 
 sudo chmod a+rwx -R * &&
 cd tamimcse.github.io && git config core.fileMode false && cd .. &&
-git clone https://github.com/tamimcse/scripts &&
-cd scripts && git config core.fileMode false && cd .. &&
-git clone https://_tamim_@bitbucket.org/_tamim_/cp-trie.git &&
-cd cp-trie && git config core.fileMode false && cd .. &&
-git clone https://_tamim_@bitbucket.org/_tamim_/c2rtl.git &&
-cd c2rtl && git config core.fileMode false && cd .. &&
-git clone https://_tamim_@bitbucket.org/_tamim_/fib-lookup-hls.git &&
-cd fib-lookup-hls && git config core.fileMode false && cd .. &&
+git clone https://github.com/tamimcse/useful-scripts &&
+cd useful-scripts && git config core.fileMode false && cd .. &&
+git clone https://github.com/tamimcse/CP-Trie.git &&
+cd CP-Trie && git config core.fileMode false && cd .. &&
+git clone https://github.com/tamimcse/C2RTL.git &&
+cd C2RTL && git config core.fileMode false && cd .. &&
 git clone https://github.com/gcc-mirror/gcc &&
 cd gcc && git config core.fileMode false && cd .. &&
 git clone https://_tamim_@bitbucket.org/_tamim_/aladdin.git &&
@@ -32,4 +30,3 @@ sudo ../configure --prefix=/opt/panda --enable-flopoco --enable-icarus --enable-
 #This sudo is also needed
 sudo make -j8 &&
 make install
-
