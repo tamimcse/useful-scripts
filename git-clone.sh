@@ -19,6 +19,9 @@ cd CP-Trie && git config core.fileMode false && cd .. &&
 git clone https://github.com/tamimcse/C2RTL.git &&
 sudo chmod a+rwx -R * &&
 cd C2RTL && git config core.fileMode false && cd .. &&
+git clone https://github.com/tamimcse/interview_practice.git &&
+sudo chmod a+rwx -R * &&
+cd C2RTL && git config core.fileMode false && cd .. &&
 git clone https://github.com/gcc-mirror/gcc &&
 sudo chmod a+rwx -R * &&
 cd gcc && git config core.fileMode false && cd .. &&
