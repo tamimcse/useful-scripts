@@ -38,6 +38,8 @@ sudo apt-get install -y binwalk squashfs-tools python-magic &&
 sudo apt-get install -y gnuplot &&
 #needed for Domino
 sudo apt-get install -y graphviz &&
+#Combines images to create a PDF
+sudo apt-get install -y gscan2pdf &&
 sudo apt-get install -y v4l-utils &&
 sudo apt-get install -y libva-dev vainfo mesa-utils mesa-common-dev inxi &&
 sudo apt-get install -y libx264-dev &&
