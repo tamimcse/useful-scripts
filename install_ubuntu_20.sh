@@ -70,11 +70,12 @@ sudo apt-get install -y flex yasm &&
 sudo apt-get install -y libmnl-dev &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
-#Bazel is needed for Google XLS
+#Bazel and python-is-python3 are needed for Google XLS
 sudo apt-get install -y apt-transport-https curl gnupg &&
 sudo apt install -y npm &&
 sudo npm install -g @bazel/bazelisk &&
 bazel --version &&
+sudo apt install -y python3-distutils python3-dev libtinfo5 python-is-python3 &&
 #Gnome tweak tool
 sudo apt install -y gnome-tweak-tool &&
 #GCC Plugin testing
