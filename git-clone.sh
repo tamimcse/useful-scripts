@@ -22,6 +22,11 @@ cd C2RTL && git config core.fileMode false && cd .. &&
 git clone https://github.com/tamimcse/interview_practice.git &&
 sudo chmod a+rwx -R * &&
 cd interview_practice && git config core.fileMode false && cd .. &&
+git clone https://github.com/google/xls.git &&
+sudo chmod a+rwx -R * &&
+cd xls && git config core.fileMode false &&
+bazel test -c opt //... &&
+cd .. &&
 git clone https://github.com/gcc-mirror/gcc &&
 sudo chmod a+rwx -R * &&
 cd gcc && git config core.fileMode false && cd .. &&
