@@ -74,6 +74,7 @@ sudo apt-get install -y libreadline-dev &&
 sudo apt-get install -y apt-transport-https curl gnupg &&
 sudo apt install -y npm &&
 sudo npm install -g @bazel/bazelisk &&
+bazel --version &&
 #Gnome tweak tool
 sudo apt install -y gnome-tweak-tool &&
 #GCC Plugin testing
