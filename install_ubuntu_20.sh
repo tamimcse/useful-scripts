@@ -12,7 +12,8 @@ sudo apt-get install -y liborc-0.4-dev gir1.2-gst-* &&
 sudo apt-get install -y texstudio texlive-latex-extra texlive-full &&
 sudo apt-get install -y liblz4-tool liblz-dev libbz2-dev &&
 sudo apt-get install -y kexec-tools &&
-sudo apt-get install -y openjdk-8-jre-headless &&
+#Don't install the headless version (headless version is a subset of the whole JDK)
+sudo apt install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
 sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev qt5-default gcc-multilib libedit-dev libclang-dev libcairo2-dev &&
