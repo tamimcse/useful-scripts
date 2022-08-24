@@ -30,6 +30,8 @@ sudo apt-get install -y redboot-tools u-boot-tools lzop bc &&
 sudo apt-get install -y xinetd tftpd tftp &&
 #Needed for checking capability
 sudo apt-get install -y libcap-dev &&
+#Needed for LegUP
+sudo apt-get install -y gxemul &&
 #Needed for menuconfig
 sudo apt-get install -y ncurses-dev &&
 #Needed for LEDE
