@@ -254,6 +254,11 @@ cd Downloads &&
 wget https://archive.apache.org/dist/netbeans/netbeans/12.4/Apache-NetBeans-12.4-bin-linux-x64.sh &&
 sudo chmod a+rwx Apache-NetBeans-12.4-bin-linux-x64.sh &&
 sudo sh Apache-NetBeans-12.4-bin-linux-x64.sh &&
+#You can download smart git binary or install it using deb file. Prefer deb file over downlaoding the binary, because after installing, you can add to desktop which saves time!!!
+wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb &&
+sudo chmod a+rwx -R smartgit-21_2_3.deb &&
+sudo apt install ./smartgit-21_2_3.deb &&
+#Also install microsoft Teams manually. I couldn't wget the deb by a fixed link
 wget https://go.skype.com/skypeforlinux-64.deb &&
 sudo chmod a+rwx skypeforlinux-64.deb &&
 sudo apt-get install ./skypeforlinux-64.deb &&
@@ -266,10 +271,6 @@ sudo snap install discord --classic &&
 sudo snap install slack --classic &&
 #install Docker
 sudo snap install docker &&
-#Also install microsoft Teams manually. I couldn't wget the deb by a fixed link
-wget https://www.syntevo.com/downloads/smartgit/smartgit-19_1_6.deb &&
-sudo chmod a+rwx -R smartgit-19_1_6.deb &&
-sudo apt install ./smartgit-19_1_6.deb &&
 #Install Klayout (GDSII viewer)
 wget https://www.klayout.org/downloads/Ubuntu-18/klayout_0.26.3-1_amd64.deb &&
 sudo chmod a+rwx -R klayout_0.26.3-1_amd64.deb &&
