@@ -249,6 +249,7 @@ echo 'export PATH="$PATH:/home/tamim/TritonRoute/build"' >> .bashrc &&
 cd Downloads &&
 #Netbeans 8.2 is no longer available. Install Netbeans 12.4 manually and install C/C++ plugin. For that, you need to enable 8.2 plugin as following:
 #https://askubuntu.com/questions/1359015/netbeans-12-4-c-c
+#Also increase the font size. You may need to increase the memory size, because Linux kernel was getting error analyzing the code
 wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-cpp-linux-x64.sh &&
 sudo chmod a+rwx netbeans-8.2-cpp-linux-x64.sh &&
 sudo sh netbeans-8.2-cpp-linux-x64.sh &&
