@@ -137,6 +137,10 @@ sudo apt-get install -y iverilog gtkwave libmotif-dev &&
 sudo apt-get install -y python3-virtualenv verilator &&
 #Needed for sv2v
 sudo apt-get install -y haskell-stack &&
+#To install Gem5
+sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libprotoc17 libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons &&
+sudo docker pull gcr.io/gem5-test/ubuntu-20.04_all-dependencies:v22-1 &&
+sudo apt install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev python &&
 #Needed for Dsagen
 sudo apt install -y zsh &&
 #Needed for Bambu HLS
