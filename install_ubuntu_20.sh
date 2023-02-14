@@ -16,7 +16,7 @@ sudo apt-get install -y kexec-tools &&
 sudo apt install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
-sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev qt5-default gcc-multilib libedit-dev libclang-dev libcairo2-dev lld &&
+sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev qt5-default gcc-multilib libedit-dev libclang-dev libcairo2-dev lld gcc-multilib g++-multilib &&
 sudo apt-get install -y g++ &&
 #BPF compiler
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
