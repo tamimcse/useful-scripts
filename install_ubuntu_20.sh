@@ -46,6 +46,8 @@ sudo apt-get install -y gscan2pdf &&
 sudo apt-get install -y v4l-utils &&
 sudo apt-get install -y libva-dev vainfo mesa-utils mesa-common-dev inxi &&
 sudo apt-get install -y libx264-dev &&
+#Needed for GPGPUsim
+sudo apt-get install -y xutils-dev libglu1-mesa-dev &&
 #Needed for GStreamer
 sudo apt-get install -y flex yasm &&
 #intsall latest NVIDIA driver (needed for good display, but don't install it on Ubuntu 18.04 beacuse Ubuntu won't be able to reboot)
