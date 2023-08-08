@@ -73,6 +73,8 @@ sudo apt-get install -y libogre-1.9-dev libois-dev libtinyxml-dev libhidapi-dev 
 sudo apt-get install -y libnice-dev &&
 sudo apt-get install -y flex yasm &&
 sudo apt-get install -y libmnl-dev &&
+#Intel Iris graphics driver is not enabled by default. Need to restart Linux after installing this for really it to work
+sudo apt install -y linux-oem-20.04 &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Bazel and python-is-python3 are needed for Google XLS
