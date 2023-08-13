@@ -93,6 +93,8 @@ sudo apt-get install -y software-properties-common &&
 sudo add-apt-repository -y ppa:george-edison55/cmake-3.x &&
 sudo apt-get update -y &&
 sudo apt-get install -y cmake &&
+#Needed for Sparta
+sudo apt install -y libyaml-cpp-dev &&
 #OpenROAD cannot find installed liblemon-dev. So, install it manually so that it's installed in /usr/local/
 wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz &&
 tar -xzvf lemon-1.3.1.tar.gz &&
