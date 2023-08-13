@@ -89,15 +89,10 @@ sudo apt install -y gnome-tweaks &&
 sudo apt install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev cimg-dev &&
-cd Downloads &&
-#apt install cmake installs cmake 10.2. OpenROAD requires higer version. So we install cmake from source
-wget https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1.tar.gz &&
-tar xvzf cmake-3.17.1.tar.gz &&
-cd cmake-3.17.1 &&
-./bootstrap &&
-sudo make -j8 &&
-sudo make install &&
-cd ../../ &&
+sudo apt-get install -y software-properties-common &&
+sudo add-apt-repository -y ppa:george-edison55/cmake-3.x &&
+sudo apt-get update -y &&
+sudo apt-get install -y cmake &&
 #OpenROAD cannot find installed liblemon-dev. So, install it manually so that it's installed in /usr/local/
 wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.1.tar.gz &&
 tar -xzvf lemon-1.3.1.tar.gz &&
@@ -140,7 +135,7 @@ echo 'export PATH="$PATH:/home/tamim/sketch-1.6.9/sketch-frontend"' >> .bashrc &
 echo 'export SKETCH_HOME="/home/tamim/sketch-1.6.9/sketch-frontend/runtime"' >> .bashrc &&
 echo 'export CLANG_DEV_LIBS="/home/tamim/clang+llvm-3.5.0-x86_64-linux-gnu"' >> .bashrc &&
 git config --global user.name "tamimcse" &&
-git config --global user.email "tamim@csebuet.org" &&
+git config --global user.email "mislam4@kent.edu" &&
 git config --global credential.helper cache &&
 git config --global credential.helper 'cache --timeout=3600' &&
 git config --global core.fileMode false &&
