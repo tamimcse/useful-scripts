@@ -242,10 +242,11 @@ wget https://archive.apache.org/dist/netbeans/netbeans/12.4/Apache-NetBeans-12.4
 sudo chmod a+rwx Apache-NetBeans-12.4-bin-linux-x64.sh &&
 sudo sh Apache-NetBeans-12.4-bin-linux-x64.sh &&
 #You can download smart git binary or install it using deb file. Prefer deb file over downlaoding the binary, because after installing, you can add to desktop which saves time!!!
-wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb &&
-sudo chmod a+rwx -R smartgit-21_2_3.deb &&
-sudo apt install ./smartgit-21_2_3.deb &&
+wget https://www.syntevo.com/downloads/smartgit/smartgit-22_1_7.deb &&
+sudo chmod a+rwx -R smartgit-22_1_7.deb &&
+sudo apt install ./smartgit-22_1_7.deb &&
 #Also install microsoft Teams manually. I couldn't wget the deb by a fixed link
+#Install Skype and Zoom. Apparently we don't need to update link for them
 wget https://go.skype.com/skypeforlinux-64.deb &&
 sudo chmod a+rwx skypeforlinux-64.deb &&
 sudo apt-get install ./skypeforlinux-64.deb &&
