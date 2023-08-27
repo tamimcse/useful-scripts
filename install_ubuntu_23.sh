@@ -7,7 +7,7 @@ sudo apt-get update &&
 #sudo apt install -y gnome-session &&
 #select gnome-shell and press ENTER
 #sudo update-alternatives --config gdm3.css &&
-sudo apt-get install -y git subversion &&
+sudo apt-get install -y git subversion gedit &&
 sudo apt-get install -y netperf inetutils-traceroute &&
 sudo apt-get install -y liborc-0.4-dev gir1.2-gst-* &&
 sudo apt-get install -y texstudio texlive-latex-extra texlive-full &&
