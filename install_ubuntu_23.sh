@@ -41,7 +41,7 @@ sudo apt-get install -y libncurses5-dev gawk gettext unzip file libssl-dev wget 
 sudo apt-get install -y binwalk squashfs-tools &&
 sudo apt-get install -y gnuplot &&
 #needed for Domino
-sudo apt-get install -y graphviz &&
+sudo apt-get install -y graphviz python3-pydot &&
 #Combines images to create a PDF
 sudo apt-get install -y gscan2pdf &&
 sudo apt-get install -y v4l-utils &&
