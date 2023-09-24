@@ -1,3 +1,26 @@
 This is the steps to setup SSH on github:
 
+1. https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Here is the history of commands.
+
+#Creates SSH key on your computer
+ssh-keygen -t ed25519 -C "mislam4@kent.edu"
+#Print the public key
+cat ~/.ssh/id_ed25519.pub
+#Add the SSH key to the ssh-agent
+ssh-add ~/.ssh/id_ed25519
+
+You also need to the public to Github website using:
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+
+2. Once those are done, use ssh version of the repository to clone the repo:
+
+e.g. git@github.com:tamimcse/useful-scripts.git
+
+Not https://github.com/tamimcse/useful-scripts.git
+
+
 
