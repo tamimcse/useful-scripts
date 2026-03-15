@@ -23,6 +23,12 @@ sudo apt-get install -y libtool libtool-bin &&
 sudo apt-get install -y g++ &&
 #BPF compiler
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
+#Needed for Gem5
+sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons &&
+sudo apt install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev-is-python3 &&
+sudo apt-get install -y python3-pip python3-full &&
+sudo apt-get install -y pipx &&
+pipx install pre-commit &&
 #dependency
 sudo apt-get install -y libgcrypt20-dev &&
 #Linaro tool-chain
@@ -65,8 +71,6 @@ sudo apt-get install -y k3b brasero &&
 sudo apt-get install -y ffmpeg &&
 #Installing GStreamer
 sudo apt-get install -y libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio &&
-sudo apt-get install -y python3-pip &&
-#sudo apt-get install -y python-pip &&
 sudo apt-get install -y ninja-build &&
 sudo apt-get install -y libfreenect-dev &&
 sudo apt-get install -y libudev-dev libusb-1.0-0-dev libturbojpeg libjpeg-turbo8-dev libglfw3-dev libjpeg-dev libxrandr-dev doxygen libxi-dev libopencv-dev &&
@@ -108,9 +112,6 @@ sudo apt-get install -y iverilog gtkwave libmotif-dev &&
 sudo apt-get install -y python3-virtualenv verilator &&
 #Needed for sv2v
 sudo apt-get install -y haskell-stack &&
-#To install Gem5
-sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons &&
-sudo apt install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev-is-python3 &&
 #Needed for Dsagen
 sudo apt install -y zsh &&
 #Needed for Bambu HLS
