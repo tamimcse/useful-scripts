@@ -24,7 +24,7 @@ sudo apt-get install -y g++ &&
 #BPF compiler
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
 #Needed for Gem5
-sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons &&
+sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons libhdf5-dev libcapstone-dev &&
 sudo apt install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev-is-python3 &&
 sudo apt-get install -y python3-pip python3-full &&
 sudo apt-get install -y pipx &&
