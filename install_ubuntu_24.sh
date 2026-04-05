@@ -14,7 +14,7 @@ sudo apt-get install -y texstudio texlive-latex-extra texlive-full &&
 sudo apt-get install -y liblz4-tool liblz-dev libbz2-dev &&
 sudo apt-get install -y kexec-tools &&
 #Don't install the headless version (headless version is a subset of the whole JDK)
-sudo apt install -y openjdk-11-jdk &&
+sudo apt-get install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
 sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev gcc-multilib libedit-dev libclang-dev libcairo2-dev lld gcc-multilib g++-multilib repo &&
@@ -25,7 +25,7 @@ sudo apt-get install -y g++ &&
 sudo apt-get install -y clang libc6-dev-i386 llvm libelf-dev binutils-dev util-linux pkg-config elfutils &&
 #Needed for Gem5
 sudo apt-get install -y libgoogle-perftools-dev libgoogle-perftools4 libprotobuf-dev libprotoc-dev libtcmalloc-minimal4 libunwind-dev protobuf-compiler scons libhdf5-dev libcapstone-dev &&
-sudo apt install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev-is-python3 &&
+sudo apt-get install -y build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev-is-python3 &&
 sudo apt-get install -y python3-pip python3-full &&
 sudo apt-get install -y pipx &&
 pipx install pre-commit &&
@@ -80,24 +80,24 @@ sudo apt-get install -y libnice-dev &&
 sudo apt-get install -y flex yasm &&
 sudo apt-get install -y libmnl-dev &&
 #Intel Iris graphics driver is not enabled by default. Need to restart Linux after installing this for really it to work
-sudo apt install -y linux-oem-20.04 &&
+sudo apt-get install -y linux-oem-20.04 &&
 sudo apt-get install -y libgmp-dev &&
 sudo apt-get install -y libreadline-dev &&
 #Bazel and python-is-python3 are needed for Google XLS
 sudo apt-get install -y apt-transport-https curl gnupg &&
-sudo apt install -y npm &&
+sudo apt-get install -y npm &&
 sudo npm install -g @bazel/bazelisk &&
 bazel --version &&
-sudo apt install -y python3-dev python-is-python3 &&
+sudo apt-get install -y python3-dev python-is-python3 &&
 #Gnome tweak tool
-sudo apt install -y gnome-tweaks &&
+sudo apt-get install -y gnome-tweaks &&
 #GCC Plugin testing
-sudo apt install -y libaspell-dev &&
+sudo apt-get install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev cimg-dev &&
 sudo apt-get install -y cmake &&
 #Needed for Sparta
-sudo apt install -y libyaml-cpp-dev rapidjson-dev libhdf5-serial-dev libwxgtk3.2-dev libcurl4-openssl-dev &&
+sudo apt-get install -y libyaml-cpp-dev rapidjson-dev libhdf5-serial-dev libwxgtk3.2-dev libcurl4-openssl-dev &&
 #Add TCL include directory to gcc include directory
 echo 'export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/tcl' >> .bashrc &&
 #Needed for RePlAce
@@ -113,7 +113,7 @@ sudo apt-get install -y python3-virtualenv verilator &&
 #Needed for sv2v
 sudo apt-get install -y haskell-stack &&
 #Needed for Dsagen
-sudo apt install -y zsh &&
+sudo apt-get install -y zsh &&
 #Needed for Bambu HLS
 sudo apt-get install -y autoconf autoconf-archive automake libtool g++ libbdd-dev libboost-all-dev libmpc-dev libmpfr-dev libxml2-dev liblzma-dev libmpfi-dev zlib1g-dev libicu-dev bison doxygen flex graphviz iverilog verilator make libsuitesparse-dev libglpk-dev &&
 sudo apt-get install -y scala &&
