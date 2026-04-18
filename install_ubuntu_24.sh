@@ -13,6 +13,8 @@ sudo apt-get install -y liborc-0.4-dev gir1.2-gst-* &&
 sudo apt-get install -y texstudio texlive-latex-extra texlive-full &&
 sudo apt-get install -y liblz4-tool liblz-dev libbz2-dev &&
 sudo apt-get install -y kexec-tools &&
+#Needed for ROCM. Also install Rocm manually
+sudo apt-get install -y libsimde-dev &&
 #Don't install the headless version (headless version is a subset of the whole JDK)
 sudo apt-get install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
