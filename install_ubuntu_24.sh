@@ -20,6 +20,8 @@ sudo apt-get install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
 sudo apt-get install -y hardinfo &&
 sudo apt-get install -y build-essential libtool autopoint autoconf bison gtk-doc-tools libboost-all-dev gcc-multilib libedit-dev libclang-dev libcairo2-dev lld gcc-multilib g++-multilib repo &&
+#Startup disk creator
+sudo apt-get install -y usb-creator-gtk &&
 #Needed for SST
 sudo apt-get install -y libtool libtool-bin &&
 sudo apt-get install -y g++ &&
