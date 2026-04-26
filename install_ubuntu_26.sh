@@ -15,6 +15,7 @@ sudo apt-get install -y liblz-dev libbz2-dev &&
 sudo apt-get install -y kexec-tools &&
 #Needed for ROCM. Also install Rocm manually
 sudo apt-get install -y libsimde-dev &&
+sudo apt install -y rocm-llvm-dev &&
 #Don't install the headless version (headless version is a subset of the whole JDK)
 sudo apt-get install -y openjdk-11-jdk &&
 sudo apt-get install -y hexchat tree &&
