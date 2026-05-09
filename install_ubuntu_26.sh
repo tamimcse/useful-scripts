@@ -94,6 +94,9 @@ sudo apt-get install -y libaspell-dev &&
 #Needed for OpenROAD
 sudo apt-get install -y tcl-dev tk-dev swig libeigen3-dev cimg-dev &&
 sudo apt-get install -y cmake &&
+#needed GPU-open
+sudo apt-get install -y build-essential cmake curl g++-multilib gcc-multilib git ninja-build pkg-config python3 python3-jinja2 python3-ruamel.yaml &&
+sudo apt-get install -y libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev &&
 git config --global user.name "tamimcse" &&
 git config --global user.email "mislam4@kent.edu" &&
 git config --global credential.helper cache &&
