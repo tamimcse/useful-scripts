@@ -40,3 +40,17 @@ build/VEGA_X86/gem5.opt   configs/example/gpufs/mi300.py   --disk-image ../gem5-
 Note that, the webpage asks us to run the following, but file names with the latest images are different:
   
 build/VEGA_X86/gem5.opt configs/example/gpufs/mi300.py --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml --app gem5-resources/src/gpu/square/bin.default/square.default
+
+
+Stem 5:
+
+I got an error because I didn't have enough memory. Following adds swap memory:
+
+free -h
+
+swapon --show
+
+sudo fallocate -l 16G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
