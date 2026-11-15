@@ -34,12 +34,9 @@ docker run --rm -u $UID:$GID -v $PWD:$PWD -w $PWD ghcr.io/gem5/gpu-fs make -f Ma
 
 Step 4:
 cd gem5
-build/VEGA_X86/gem5.opt \
-  configs/example/gpufs/mi300.py \
-  --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml \
-  --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml \
-  --app gem5-resources/src/gpu/square/bin.default/square.default
+
+build/VEGA_X86/gem5.opt   configs/example/gpufs/mi300.py   --disk-image ../gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-rocm70   --kernel ../gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-rocm70   --app ../gem5-resources/src/gpu/square/bin.default/square.default
   
-Note that, you need to add ../ before gem5-resources. This command is the same as mentioned on the webpage as following, but I often miss the ../ and get error:
+Note that, the webpage asks us to run the following, but file names with the latest images are different:
   
 build/VEGA_X86/gem5.opt configs/example/gpufs/mi300.py --disk-image gem5-resources/src/x86-ubuntu-gpu-ml/disk-image/x86-ubuntu-gpu-ml --kernel gem5-resources/src/x86-ubuntu-gpu-ml/vmlinux-gpu-ml --app gem5-resources/src/gpu/square/bin.default/square.default
